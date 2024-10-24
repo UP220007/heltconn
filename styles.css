@@ -1,0 +1,130 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe toda la altura */
+}
+
+
+header {
+    background-color: #0A374D;
+    color: #fff;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0A374D;
+    width: 100%;
+}
+
+.nav-links li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 4px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Estilo de secciones y comportamiento de pestañas */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    display: none; /* Ocultar por defecto */
+}
+
+.section.active {
+    display: block; /* Mostrar solo la sección activa */
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #0A374D;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky; /* O usa absolute si prefieres */
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Esto asegura que el footer esté al final si el contenido es corto */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .nav-links li {
+        margin-left: 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
