@@ -6,7 +6,8 @@
     font-family: Arial, sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -16,7 +17,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que ocupe toda la altura */
+    min-height: 100vh;
+    /* Asegura que ocupe toda la altura */
 }
 
 
@@ -86,11 +88,13 @@ h1 {
 .section {
     padding: 40px 20px;
     text-align: center;
-    display: none; /* Ocultar por defecto */
+    display: none;
+    /* Ocultar por defecto */
 }
 
 .section.active {
-    display: block; /* Mostrar solo la sección activa */
+    display: block;
+    /* Mostrar solo la sección activa */
 }
 
 .map img {
@@ -104,10 +108,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: sticky; /* O usa absolute si prefieres */
+    position: sticky;
+    /* O usa absolute si prefieres */
     bottom: 0;
     width: 100%;
-    margin-top: auto; /* Esto asegura que el footer esté al final si el contenido es corto */
+    margin-top: auto;
+    /* Esto asegura que el footer esté al final si el contenido es corto */
 }
 
 /* Responsive */
@@ -127,4 +133,34 @@ footer {
     .hamburger {
         display: none;
     }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espaciado entre íconos */
+    margin-top: 20px;
+}
+
+/* Estilos para los íconos */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+    /* Color negro para los iconos */
+    transition: fill 0.3s;
+    /* Animación de transición en hover */
+}
+
+/* Cambiar color al pasar el mouse (hover) */
+.social-icons a:hover svg {
+    fill: #0077b5;
+    /* Cambia el color en hover (ejemplo: azul LinkedIn) */
 }
